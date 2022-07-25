@@ -9,7 +9,7 @@ import { ParentComponentComponent } from './parent-component/parent-component.co
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent,
+    ChildComponent, // Declare components for use throughout the module
     ParentComponentComponent
   ],
   imports: [
@@ -17,6 +17,7 @@ import { ParentComponentComponent } from './parent-component/parent-component.co
     AppRoutingModule
   ],
   providers: [],
+  exports: [], // Export any components/etc. so other modules can use them
   bootstrap: [AppComponent]
 })
 export class AppModule { }
