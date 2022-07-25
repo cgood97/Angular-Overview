@@ -20,7 +20,7 @@ export class ChildComponent implements OnInit, OnChanges, OnDestroy {
   secondInput?: string // Optional Input
 
   @Output() // Parent/host component can optionally use this event binding
-  updateEvent = new EventEmitter<string>();
+  updateEvent = new EventEmitter<string>(); // Essentially an observable stream
 
   // Can omit this if you are not injecting any dependencies
   constructor() {}
@@ -52,7 +52,7 @@ export class ChildComponent implements OnInit, OnChanges, OnDestroy {
 
   // Class method that emits an event
   emitEvent() {
-    this.updateEvent.emit('Button Clicked!');
+    this.updateEvent.emit('Button Clicked!'); // Push value onto updateEvent stream
     this._helperMethod();
   }
 
