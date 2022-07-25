@@ -1,0 +1,14 @@
+<p>Child Component</p>
+<button (click)="emitEvent()">Sample Button</button>
+
+<!-- Cannot apply style/class -->
+<!-- Can use directives here -->
+<ng-container></ng-container>
+
+<!-- Directives are classes that add additional functionality to html elements -->
+
+<!-- Structural directives (use *) add or remove elements from the DOM -->
+<ng-container *ngIf="true"></ng-container>
+
+<!-- Attribute directives (no *) change the appearance or behavior of DOM elements -->
+<ng-container [ngStyle]="{ 'color': 'blue' }"></ng-container>
